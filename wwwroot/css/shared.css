@@ -1,0 +1,223 @@
+﻿html {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    height: 10000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    align-items: center;
+    display: inline-flex;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 150%;
+    color: #0c0e10;
+}
+
+.img-header {
+    width: 700px;
+    height: 350px;
+    margin-top: 20px;
+}
+
+#header-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+    background-color: #113d8ee4;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 70px;
+    transition: background-color 0.5s;
+}
+
+#header-bottom {
+    position: sticky;
+    top: 0;
+    padding: 25px 0;
+    width: 50%;
+    z-index: 1000;
+}
+
+.button {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 10px; /* Отступ сверху */
+    right: 10px; /* Отступ справа */
+    border: none;
+    background-color: rgba(255, 165, 3, 1);
+    padding: 15px 30px;
+    border-radius: 3px;
+    color: #370b0b;
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 600;
+    transition: all 250ms ease;
+    z-index: 1001; /* Убедимся, что кнопка поверх других элементов */
+}
+
+    .button:hover {
+        color: #fff;
+        background-color: #370b0b;
+    }
+
+
+.button-header {
+    display: flex;
+    align-items: center;
+}
+
+    .button-header .button,
+    .side-menu .button {
+        border: 2px solid #000;
+        background-color: transparent;
+        padding: 7px 14px;
+        margin: 0 9px;
+        border-radius: 3px;
+        color: #000;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 250ms ease;
+    }
+
+        .button-header .button:hover,
+        .side-menu .button:hover {
+            color: #fff;
+            background-color: #000;
+        }
+
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    .menu li {
+        display: inline;
+        padding: 0 20px;
+    }
+
+    .menu a,
+    .side-menu a {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 150%;
+        color: #0c0e10;
+        text-decoration: none;
+    }
+
+        .menu a:hover {
+            color: #000;
+        }
+
+.container {
+    width: 82%;
+    border: 2px solid #cacaca;
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.container-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 40px;
+}
+
+.info-sections {
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: #0094ff;
+}
+
+.text {
+    text-indent: 40px;
+    margin: 5px;
+    text-align: justify;
+    font-size: 20px;
+    color: black;
+}
+
+footer {
+    background-color: #113d8ee4;
+    width: 100%;
+    padding-top: 60px;
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    footer .footer-left {
+        width: 40%;
+        display: grid;
+        gap: 20px;
+    }
+
+    footer .footer-right {
+        width: 50%;
+    }
+
+.footer-WebShope {
+    margin-bottom: 20px;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: fit-content;
+    background-color: #113d8ee4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    z-index: 200;
+}
+
+    .side-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+        display: grid;
+        justify-content: space-around;
+    }
+
+        .side-menu ul li {
+            margin: 10px 0;
+        }
+
+    .side-menu.active {
+        right: 0;
+    }
+
+.icon {
+    display: none;
+}
+
+.side-menu,
+.form {
+    width: 100%;
+    padding: 50px;
+    font-size: 16px;
+    position: absolute;
+    transition: 0.5s;
+}
+

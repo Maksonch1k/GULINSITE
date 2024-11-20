@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TravelAgency_Diachenko</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/shared.css" />
+    <link href="~/css/login_and_registration.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header-top">
+     
+        <div class="logo"></div>
+        <div class="button-header">
+            <button class="button" id="click-to-hide">Войти</button>
+        </div>
+        <div id="hamburger" class="icon">&#9776;</div>
+    </div>
+
+
+
+    @await Html.PartialAsync("_LoginRegistrationPartial")
+
+
+    <img class="img-header" src="~/images/acsess.png" />
+
+    <div id="header-bottom">
+        <div id="menu" class="menu">
+            <ul>
+                <li><a asp-controller="Home" asp-action="SiteInformation">Главная</a></li>
+                <li><a asp-controller="Home" asp-action="Contact">Контакты</a></li>
+                <li><a asp-controller="Home" asp-action="Country">Страны</a></li>
+                <li><a asp-controller="Home" asp-action="Service">Услуги</a></li>
+               
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="side-menu" id="side-menu">
+       <div>
+            <ul>
+
+                <li><a asp-controller="Home" asp-action="SiteInformation">Главная</a></li>
+                <li><a asp-controller="Home" asp-action="Contact">Контакты</a></li>
+                <li><a asp-controller="Home" asp-action="Country">Страны</a></li>
+                <li><a asp-controller="Home" asp-action="Service">Услуги</a></li>
+            </ul>
+       </div>
+        <button class="button" id="side-menu-button-click-to-hide" type="button" name="button">Войти</button>
+    </div>
+   
+
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+
+    <script src="/js/shared_script.js" asp-append-version="true"></script>
+    <script src="/js/home_script.js" asp-append-version="true"></script>
+    <script src="~/js/shared_script.js"></script>
+    <script src="~/js//login_and_registration_script.js"></script>
+</body>
+</html>
+
+
+
+<footer>
+  <div class="footer-left">
+    <div class="logo">Мобильные акссесуары</div>
+    <p>Здесь вы можете выбрать все что вам нравиться.</p>
+  </div>
+  <div class="footer-TravelAgency">
+    Copy© 2924 - TravelAgency - Podselkina
+  </div>
+  <div class="footer-right">
+    <div class="menu">
+      <ul>
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#contact">Контакты</a></li>
+        <li><a href="#countries">Страны</a></li>
+        <li><a href="#services">Услуги</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
